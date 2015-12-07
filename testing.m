@@ -18,9 +18,8 @@ for t = 1 : T
     % compute distance from 2 sources
     dist = sources - curB
     % update weights as a function of distances 
-    weights(1) = (dist(1) / sum(abs(dist)))* tau
-    weights(2) = (1 - dist(2) / sum(abs(dist))) * tau
-    
+    weights(2) = 1 - dist(2) / sum(abs(dist));
+    weights(1) = 1 - weights(2);    
     
     % update location 
     curB = curB + weights * dist'
