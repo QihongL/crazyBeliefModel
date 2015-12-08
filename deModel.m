@@ -1,6 +1,6 @@
-function plotDirectionField()
+function deModel()
 % set the DE you want to plot 
-f = @(t,y) - .33* (y-2)*(1-y)*(3-y);
+f = @(t,y) - .3* (y-2)*(1-y)*(3-y);
 
 % plotting parameters
 range = 5;
